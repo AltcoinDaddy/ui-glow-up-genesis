@@ -1,5 +1,5 @@
 
-import { Wallet, Users, Zap, ArrowRight, Heart, Sparkles, Coins } from 'lucide-react';
+import { Wallet, Users, Zap, ArrowRight, Heart, TrendingUp, Coins } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
@@ -11,20 +11,20 @@ const Index = () => {
     {
       icon: Coins,
       title: "Zero Platform Fees",
-      description: "Every tip goes directly to creators. No middlemen, no hidden costs. Pure peer-to-peer value exchange on the Flow blockchain.",
-      color: "from-emerald-500 to-green-600"
+      description: "Direct creator compensation with complete transparency. Every contribution reaches creators without intermediary costs on our blockchain infrastructure.",
+      color: "from-emerald-600 to-green-700"
     },
     {
       icon: Heart,
-      title: "Build Your Universe",
-      description: "Create your unique creator profile and connect with supporters who truly value your work in our decentralized creator ecosystem.",
-      color: "from-green-500 to-lime-600"
+      title: "Professional Profiles",
+      description: "Establish your professional presence with comprehensive creator profiles designed for meaningful audience engagement and growth.",
+      color: "from-green-600 to-emerald-700"
     },
     {
       icon: Zap,
-      title: "Lightning Withdrawals",
-      description: "Instant access to your earnings with guaranteed immediate withdrawals to your Flow wallet. Your money, your control.",
-      color: "from-lime-500 to-emerald-600"
+      title: "Instant Settlements",
+      description: "Real-time transaction processing with immediate access to earnings through our optimized blockchain settlement system.",
+      color: "from-emerald-700 to-green-600"
     }
   ];
 
@@ -36,33 +36,33 @@ const Index = () => {
         <Navbar />
         <HeroSection />
         
-        {/* Features Section with Asymmetric Layout */}
-        <section className="py-32 px-4 relative">
+        {/* Professional Features Section */}
+        <section className="py-24 px-4 relative">
           <div className="max-w-7xl mx-auto">
             {/* Section Header */}
-            <div className="text-center mb-24">
-              <div className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600/20 to-green-600/20 px-8 py-4 rounded-full border border-emerald-500/30 mb-12 backdrop-blur-xl">
-                <Sparkles className="w-5 h-5 text-emerald-400" />
-                <span className="text-emerald-300 text-sm font-bold tracking-wider uppercase">Game-Changing Features</span>
+            <div className="text-center mb-20">
+              <div className="inline-flex items-center gap-2 bg-emerald-950/40 border border-emerald-600/30 px-6 py-3 rounded-full mb-8 backdrop-blur-xl">
+                <TrendingUp className="w-4 h-4 text-emerald-400" />
+                <span className="text-emerald-300 text-sm font-medium tracking-wide">Platform Features</span>
               </div>
               
-              <h2 className="text-6xl md:text-7xl font-black mb-8 leading-tight">
-                <span className="block bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
-                  Reimagining
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                <span className="block text-white">
+                  Professional-Grade
                 </span>
-                <span className="block bg-gradient-to-r from-emerald-400 via-green-400 to-lime-400 bg-clip-text text-transparent transform skew-x-6">
-                  Creator Freedom
+                <span className="block bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent">
+                  Creator Tools
                 </span>
               </h2>
               
-              <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed font-medium">
-                Break free from traditional platforms. Experience the future of 
-                <span className="text-transparent bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text font-bold"> direct creator support</span>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+                Advanced features designed for professional creators who demand 
+                <span className="text-emerald-400 font-medium"> excellence and reliability</span>
               </p>
             </div>
 
-            {/* Features Grid with Unique Layout */}
-            <div className="grid lg:grid-cols-3 gap-12">
+            {/* Features Grid */}
+            <div className="grid lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <FeatureCard key={index} {...feature} index={index} />
               ))}
@@ -70,44 +70,41 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Unique CTA Section */}
-        <section className="py-32 px-4 relative">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="relative backdrop-blur-2xl bg-gradient-to-br from-emerald-600/10 via-green-600/10 to-lime-600/10 p-16 rounded-[3rem] border border-emerald-500/20 overflow-hidden shadow-2xl">
-              {/* Animated Background Elements */}
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/5 to-green-600/5 animate-pulse"></div>
-              <div className="absolute top-0 left-0 w-40 h-40 bg-gradient-to-br from-emerald-500/20 to-green-500/20 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/20 to-lime-500/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        {/* Professional CTA Section */}
+        <section className="py-24 px-4 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="relative backdrop-blur-xl bg-white/[0.02] p-12 rounded-3xl border border-emerald-500/20 overflow-hidden shadow-2xl">
+              {/* Subtle Background Enhancement */}
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-950/20 to-green-950/20"></div>
               
               <div className="relative z-10">
-                <div className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600/30 to-green-600/30 px-6 py-3 rounded-full border border-emerald-400/40 mb-8 backdrop-blur-xl">
-                  <div className="w-2 h-2 bg-lime-400 rounded-full animate-pulse"></div>
-                  <span className="text-emerald-300 text-sm font-bold tracking-wider uppercase">Join The Revolution</span>
+                <div className="inline-flex items-center gap-2 bg-emerald-950/50 border border-emerald-600/40 px-4 py-2 rounded-full mb-6 backdrop-blur-xl">
+                  <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></div>
+                  <span className="text-emerald-300 text-sm font-medium tracking-wide">Join Today</span>
                 </div>
                 
-                <h3 className="text-5xl md:text-6xl font-black mb-8 leading-tight">
-                  <span className="bg-gradient-to-r from-white via-emerald-200 to-lime-200 bg-clip-text text-transparent">
-                    Ready to break
+                <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+                  <span className="text-white">
+                    Ready to elevate your
                   </span>
                   <br />
-                  <span className="bg-gradient-to-r from-emerald-400 via-green-400 to-lime-400 bg-clip-text text-transparent transform -skew-x-3 inline-block">
-                    the boundaries?
+                  <span className="bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent">
+                    creator journey?
                   </span>
                 </h3>
                 
-                <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto font-medium leading-relaxed">
-                  Step into the future of decentralized creator economy. Connect your wallet and 
-                  start experiencing true creative freedom.
+                <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed">
+                  Join thousands of professional creators building sustainable income streams 
+                  through our advanced decentralized platform.
                 </p>
                 
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-emerald-600 via-green-600 to-lime-600 hover:from-emerald-700 hover:via-green-700 hover:to-lime-700 text-white px-16 py-8 text-xl font-black rounded-3xl shadow-2xl shadow-emerald-500/30 border-0 transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/50 relative overflow-hidden group"
+                  className="bg-gradient-to-r from-emerald-700 to-green-700 hover:from-emerald-800 hover:to-green-800 text-white px-10 py-4 text-lg font-medium rounded-xl shadow-lg border-0 transition-all duration-300 hover:shadow-emerald-500/25"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-lime-600 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <Wallet className="mr-4 h-7 w-7 relative z-10" />
-                  <span className="relative z-10">Launch Experience</span>
-                  <ArrowRight className="ml-4 h-7 w-7 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
+                  <Wallet className="mr-3 h-5 w-5" />
+                  <span>Start Your Journey</span>
+                  <ArrowRight className="ml-3 h-5 w-5" />
                 </Button>
               </div>
             </div>

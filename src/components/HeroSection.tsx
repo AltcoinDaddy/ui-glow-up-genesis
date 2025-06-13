@@ -1,89 +1,85 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Zap, Heart, Coins } from 'lucide-react';
+import { ArrowRight, Zap, Heart, TrendingUp } from 'lucide-react';
 
 const HeroSection = () => {
   return (
     <section className="pt-32 pb-20 px-4 relative min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Column - Text Content */}
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
+          {/* Left Column - Refined Content */}
           <div className="relative">
-            {/* Floating Badge */}
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-600/20 to-green-600/20 px-8 py-4 rounded-full border border-emerald-500/30 mb-12 animate-fade-in backdrop-blur-xl">
-              <div className="w-2 h-2 bg-lime-400 rounded-full animate-pulse"></div>
-              <span className="text-emerald-300 text-sm font-bold tracking-wider uppercase">Revolutionary Creator Economy</span>
+            {/* Professional Status Badge */}
+            <div className="inline-flex items-center gap-2 bg-emerald-950/40 border border-emerald-600/30 px-6 py-3 rounded-full mb-8 animate-fade-in backdrop-blur-xl">
+              <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full"></div>
+              <span className="text-emerald-300 text-sm font-medium tracking-wide">Next-Generation Creator Economy</span>
             </div>
 
-            {/* Main Heading with Unique Typography */}
-            <h1 className="text-6xl md:text-7xl font-black mb-8 leading-tight">
-              <span className="block relative">
-                <span className="bg-gradient-to-r from-emerald-400 via-green-400 to-lime-400 bg-clip-text text-transparent animate-fade-in">
-                  Tip. Support.
-                </span>
-                <div className="absolute -top-4 -right-8 w-8 h-8 bg-gradient-to-br from-lime-400 to-emerald-400 rounded-full animate-bounce"></div>
+            {/* Sophisticated Headlines */}
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              <span className="block text-white animate-fade-in">
+                Professional
               </span>
-              <span className="block text-white animate-fade-in transform -skew-x-6" style={{ animationDelay: '0.2s' }}>
-                Create Magic.
+              <span className="block bg-gradient-to-r from-emerald-400 to-green-500 bg-clip-text text-transparent animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                Creator Platform
               </span>
             </h1>
 
-            {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-gray-300 max-w-lg mb-12 leading-relaxed animate-fade-in font-medium" style={{ animationDelay: '0.4s' }}>
-              Where creators meet supporters in a 
-              <span className="text-transparent bg-gradient-to-r from-emerald-400 to-green-400 bg-clip-text font-bold"> decentralized universe</span> of direct crypto tipping.
+            {/* Refined Description */}
+            <p className="text-xl text-gray-300 max-w-lg mb-10 leading-relaxed animate-fade-in font-light" style={{ animationDelay: '0.4s' }}>
+              Connect with your audience through a sophisticated, 
+              <span className="text-emerald-400 font-medium"> decentralized ecosystem</span> designed for professional creators.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+            {/* Professional CTA Section */}
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-emerald-600 via-green-600 to-lime-600 hover:from-emerald-700 hover:via-green-700 hover:to-lime-700 text-white px-12 py-6 text-lg font-bold rounded-2xl shadow-2xl shadow-emerald-500/30 border-0 transition-all duration-300 hover:scale-105 hover:shadow-emerald-500/50 relative overflow-hidden group"
+                className="bg-gradient-to-r from-emerald-700 to-green-700 hover:from-emerald-800 hover:to-green-800 text-white px-8 py-4 text-base font-medium rounded-xl shadow-lg transition-all duration-300 hover:shadow-emerald-500/25"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-lime-600 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <Zap className="mr-3 h-6 w-6 relative z-10" />
-                <span className="relative z-10">Start Exploring</span>
-                <ArrowRight className="ml-3 h-6 w-6 relative z-10" />
+                <TrendingUp className="mr-2 h-5 w-5" />
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               
               <Button 
                 variant="outline" 
                 size="lg"
-                className="bg-transparent border-2 border-emerald-400/50 text-emerald-300 hover:text-white hover:border-emerald-400 hover:bg-emerald-500/10 px-12 py-6 text-lg font-bold rounded-2xl transition-all duration-300 hover:scale-105 backdrop-blur-xl"
+                className="bg-transparent border border-emerald-600/40 text-emerald-300 hover:text-white hover:border-emerald-500 hover:bg-emerald-950/30 px-8 py-4 text-base font-medium rounded-xl transition-all duration-300 backdrop-blur-xl"
               >
-                <Heart className="mr-3 h-5 w-5" />
-                How It Works
+                <Heart className="mr-2 h-4 w-4" />
+                Learn More
               </Button>
             </div>
           </div>
 
-          {/* Right Column - Visual Element */}
+          {/* Right Column - Elegant Visual */}
           <div className="relative flex justify-center items-center">
-            <div className="relative w-80 h-80 animate-fade-in" style={{ animationDelay: '0.8s' }}>
-              {/* Central Orb */}
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500 via-green-500 to-lime-500 rounded-full animate-pulse shadow-2xl shadow-emerald-500/50"></div>
-              
-              {/* Orbiting Elements */}
-              <div className="absolute inset-0 animate-spin" style={{ animationDuration: '20s' }}>
-                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-br from-lime-400 to-emerald-400 rounded-2xl flex items-center justify-center shadow-lg">
-                  <Coins className="w-8 h-8 text-white" />
-                </div>
+            <div className="relative w-72 h-72 animate-fade-in" style={{ animationDelay: '0.8s' }}>
+              {/* Central Professional Element */}
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/20 to-green-600/20 backdrop-blur-xl rounded-3xl border border-emerald-500/20 shadow-2xl"></div>
+              <div className="absolute inset-4 bg-gradient-to-br from-emerald-700 to-green-700 rounded-2xl flex items-center justify-center">
+                <div className="text-4xl font-bold text-white">FT</div>
               </div>
               
-              <div className="absolute inset-0 animate-spin" style={{ animationDuration: '25s', animationDirection: 'reverse' }}>
-                <div className="absolute top-1/2 -right-8 transform -translate-y-1/2 w-12 h-12 bg-gradient-to-br from-emerald-400 to-green-400 rounded-full flex items-center justify-center shadow-lg">
-                  <Heart className="w-6 h-6 text-white" />
-                </div>
-              </div>
-              
+              {/* Sophisticated Orbiting Elements */}
               <div className="absolute inset-0 animate-spin" style={{ animationDuration: '30s' }}>
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-14 h-14 bg-gradient-to-br from-green-400 to-lime-400 rounded-xl flex items-center justify-center shadow-lg">
-                  <Zap className="w-7 h-7 text-white" />
+                <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center shadow-lg">
+                  <TrendingUp className="w-6 h-6 text-white" />
                 </div>
               </div>
               
-              {/* Inner glow */}
-              <div className="absolute inset-4 bg-gradient-to-br from-emerald-400/30 to-lime-400/30 rounded-full blur-xl"></div>
+              <div className="absolute inset-0 animate-spin" style={{ animationDuration: '40s', animationDirection: 'reverse' }}>
+                <div className="absolute top-1/2 -right-6 transform -translate-y-1/2 w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center shadow-lg">
+                  <Heart className="w-5 h-5 text-white" />
+                </div>
+              </div>
+              
+              <div className="absolute inset-0 animate-spin" style={{ animationDuration: '50s' }}>
+                <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-11 h-11 bg-gradient-to-br from-emerald-600 to-green-500 rounded-xl flex items-center justify-center shadow-lg">
+                  <Zap className="w-5 h-5 text-white" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
