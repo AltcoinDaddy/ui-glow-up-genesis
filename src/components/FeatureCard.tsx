@@ -14,46 +14,52 @@ interface FeatureCardProps {
 const FeatureCard = ({ icon: Icon, title, description, color, index }: FeatureCardProps) => {
   return (
     <div 
-      className="group relative p-8 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-500 hover:scale-105 animate-fade-in"
-      style={{ animationDelay: `${index * 0.2}s` }}
+      className="group relative p-10 rounded-3xl backdrop-blur-xl bg-gradient-to-br from-white/[0.02] to-white/[0.05] border border-white/10 hover:border-violet-400/30 transition-all duration-700 hover:scale-105 animate-fade-in overflow-hidden"
+      style={{ animationDelay: `${index * 0.3}s` }}
     >
-      {/* Background Gradient */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${color} opacity-0 group-hover:opacity-10 rounded-3xl transition-opacity duration-500`}></div>
+      {/* Unique Background Pattern */}
+      <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-700">
+        <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-violet-500 to-cyan-500 rounded-full blur-3xl transform -translate-x-16 -translate-y-16"></div>
+        <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-br from-purple-500 to-emerald-500 rounded-full blur-2xl transform translate-x-12 translate-y-12"></div>
+      </div>
+      
+      {/* Animated Border */}
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-violet-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 blur-sm"></div>
       
       {/* Content */}
       <div className="relative z-10">
-        {/* Icon */}
-        <div className={`w-16 h-16 bg-gradient-to-br ${color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-          <Icon className="w-8 h-8 text-white" />
+        {/* Icon with unique design */}
+        <div className="relative mb-8">
+          <div className={`w-20 h-20 bg-gradient-to-br ${color} rounded-3xl flex items-center justify-center group-hover:scale-110 transition-transform duration-500 shadow-lg transform rotate-6 group-hover:rotate-12`}>
+            <Icon className="w-10 h-10 text-white" />
+          </div>
+          <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-br from-emerald-400 to-cyan-400 rounded-full animate-pulse opacity-80"></div>
         </div>
 
-        {/* Feature Label */}
-        <div className="inline-block px-3 py-1 bg-white/10 rounded-full text-xs font-medium text-gray-300 mb-4 uppercase tracking-wider">
-          FEATURE
-        </div>
-
-        {/* Title */}
-        <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 group-hover:bg-clip-text transition-all duration-300">
+        {/* Title with unique typography */}
+        <h3 className="text-2xl font-black mb-6 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-violet-400 group-hover:via-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-500 leading-tight">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-gray-400 leading-relaxed mb-8 group-hover:text-gray-300 transition-colors duration-300">
+        <p className="text-gray-400 leading-relaxed mb-10 group-hover:text-gray-300 transition-colors duration-500 text-lg font-medium">
           {description}
         </p>
 
-        {/* Learn More Button */}
+        {/* Learn More Button with unique design */}
         <Button 
           variant="ghost" 
-          className="text-gray-400 hover:text-white p-0 h-auto font-semibold group/btn"
+          className="text-violet-400 hover:text-white p-0 h-auto font-bold group/btn text-lg relative"
         >
-          Learn more
-          <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
+          <span className="relative z-10">Discover More</span>
+          <ArrowRight className="ml-3 h-5 w-5 group-hover/btn:translate-x-2 transition-transform duration-300 relative z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-cyan-500/20 rounded-xl opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 -m-3"></div>
         </Button>
       </div>
 
-      {/* Floating Orb */}
-      <div className={`absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-br ${color} rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm`}></div>
+      {/* Floating Elements */}
+      <div className="absolute top-4 right-4 w-3 h-3 bg-gradient-to-br from-violet-400 to-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse"></div>
+      <div className="absolute bottom-6 left-6 w-2 h-2 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
     </div>
   );
 };
